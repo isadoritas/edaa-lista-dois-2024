@@ -1,14 +1,10 @@
 import java.util.Scanner;
 
-// ... (código anterior)
-
-// Classe Principal
 public class Main {
     public static void main(String[] args) {
         Empresa empresa = new Empresa();
         Scanner scanner = new Scanner(System.in);
 
-        // Exemplo de criação de funcionários
         Funcionario desenvolvedor = lerDadosFuncionario(scanner, "Desenvolvedor");
         Funcionario gerente = lerDadosFuncionario(scanner, "Gerente");
         Funcionario suporte = lerDadosFuncionario(scanner, "Suporte");
@@ -17,12 +13,10 @@ public class Main {
         empresa.addFuncionarios(gerente);
         empresa.addFuncionarios(suporte);
 
-        // Cálculo da folha salarial
         double folhaSalarial = empresa.calcularFolhaSalarial();
         System.out.println("Folha salarial total: R$" + folhaSalarial);
     }
 
-    // Método para ler os dados de um funcionário
     public static Funcionario lerDadosFuncionario(Scanner scanner, String cargo) {
         System.out.println("Digite o nome do " + cargo + ":");
         String nome = scanner.nextLine();
